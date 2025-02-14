@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.heart-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.heart {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, #ff4f80, #ff1c48); /* Pink to Red gradient */
+    transform: rotate(45deg); /* Rotate the heart */
+    margin: 100px;
+    animation: grow 2s forwards, pulse 1.2s infinite alternate, glow 1.5s infinite alternate; /* Add animations */
+    box-shadow: 0 0 50px rgba(255, 100, 100, 0.7); /* Add shadow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; /* Change cursor to pointer */
+    z-index: 0; /* Ensure heart is below the text */
+}
+
+.heart::before,
+.heart::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, #ff4f80, #ff1c48); /* Gradient for both sides */
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -100px;
+    left: 0;
+}
+
+.heart::after {
+    top: 0;
+    left: -100px;
+}
+
+.heart-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heart-button {
+    font-family: 'Pacifico', cursive;
+    font-size: 24px; /* Adjust font size */
+    color: beige;
+    text-align: center;
+    position: absolute;
+    z-index: 1; /* Ensure text is above the heart */
+    transform: translate(-50%, -50%) rotate(-45deg); /* Center the text inside the heart and counter-rotate */
+    top: 40%;
+    left: 40%;
+    width: 300px;
+}
+
+/* Animation to gradually grow to full size */
+@keyframes grow {
+    from {
+        transform: scale(0.5) rotate(45deg); /* Adjust rotation */
+    }
+    to {
+        transform: scale(1) rotate(45deg); /* Adjust rotation */
+    }
+}
+
+/* Stronger pulsing effect */
+@keyframes pulse {
+    from {
+        transform: scale(1) rotate(45deg); /* Adjust rotation */
+    }
+    to {
+        transform: scale(1.15) rotate(45deg); /* Adjust rotation */
+    }
+}
+
+/* Heart glow animation */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 25px rgba(255, 100, 100, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 50px rgba(255, 100, 100, 1);
+    }
+    100% {
+        box-shadow: 0 0 25px rgba(255, 100, 100, 0.7);
+    }
+}

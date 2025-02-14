@@ -1,0 +1,48 @@
+.poem-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #ff9a9e, #fad0c4); /* Soft, romantic gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.poem-content {
+    font-family: 'Pacifico', cursive; /* Use the new scripted font */
+    font-size: 20px; /* Adjust font size */
+    color: #4a4a4a; /* Darker color for better visibility */
+    text-align: center;
+    line-height: 1.5;
+    text-shadow: 0 0 25px rgba(255, 255, 255, 0.7); /* Softer glow for text */
+    padding: 20px; /* Add padding for better text alignment */
+    width: 60%; /* Adjust width */
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center; /* Center the buttons container */
+    align-items: center;
+    gap: 20px; /* Add space between buttons */
+    margin-top: 20px;
+}
+
+.go-back-button, .surprise-button {
+    font-family: 'Pacifico', cursive; /* Use the new scripted font */
+    font-size: 16px; /* Adjust font size */
+    color: white;
+    background-color: #ff4f80; /* Background color for the button */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.go-back-button:hover, .surprise-button:hover {
+    background-color: #ff1c48; /* Change background color on hover */
+}
